@@ -4,6 +4,9 @@ hg clone https://bitbucket.org/fabriceT/openbox-menu
 cd openbox-menu
 make
 sudo make install DESTDIR=/usr
+echo "Configuring autostart..."
 echo "" >> ~/.config/openbox/autostart.sh
 echo "## Launch openbox-menu" >> ~/.config/openbox/autostart.sh
 echo "openbox-menu lxde-applications.menu -p -o menu.xml &" >> ~/.config/openbox/autostart.sh
+echo "Configuring menu.xml..."
+echo '<menu id="desktop-app-menu" label="Applications" execute="cat ~/.cache/menu.xml"/>' >> "~/.config/openbox/menu.xml"
