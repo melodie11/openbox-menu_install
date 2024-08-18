@@ -1,6 +1,6 @@
 sudo apt-get update
 sudo apt-get install mercurial libmenu-cache-dev gtk2.0 glib2.0
-hg clone https://bitbucket.org/fabriceT/openbox-menu
+hg clone https://github.com/fabriceT/openbox-menu.git
 cd openbox-menu
 make
 sudo make install DESTDIR=/usr
